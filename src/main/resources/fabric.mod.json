@@ -9,7 +9,7 @@
   ],
   "contact": {},
   "license": "MIT",
-  "icon": "assets/com.EternalHellDevs.MoreFlowerPots/icon.png",
+  "icon": "assets/more_flower_pots/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
