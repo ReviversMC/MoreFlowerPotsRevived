@@ -3,9 +3,10 @@
   "id": "moreflowerpots",
   "version": "${version}",
   "name": "com.eternalhelldevs.moreflowerpots",
-  "description": "MoreFlowerPots ported to Fabric",
+  "description": "MoreFlowerPots for Fabric (ReviversMC flavoured)",
   "authors": [
-    "EternalHellDevs"
+    "EternalHellDevs",
+    "thefirethirteen"
   ],
   "contact": {},
   "license": "MIT",
