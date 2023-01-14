@@ -3,7 +3,7 @@ package com.eternalhelldevs.moreflowerpots.util;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registries;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -53,7 +53,7 @@ public class Flower implements Comparable<Flower> {
     static {
         FLOWERS.put("air", new Flower("air", Blocks.AIR));
         for (Block block : ModUtil.PLANTS) {
-            FLOWERS.put(Registry.BLOCK.getId(block).getPath(), new Flower(Registry.BLOCK.getId(block).getPath(), block));
+            FLOWERS.put(Registries.BLOCK.getId(block).getPath(), new Flower(Registries.BLOCK.getId(block).getPath(), block));
         }
         /* BOP is not available on Fabric.
         if (FabricLoader.getInstance().getAllMods().contains("biomesoplenty")) {

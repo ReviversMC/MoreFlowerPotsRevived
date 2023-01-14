@@ -2,11 +2,13 @@ package com.eternalhelldevs.moreflowerpots.blocks;
 
 import com.eternalhelldevs.moreflowerpots.properties.FlowerProperty;
 import com.eternalhelldevs.moreflowerpots.util.Flower;
+
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.registry.Registries;
 import net.minecraft.stat.Stats;
 import net.minecraft.state.StateManager;
 import net.minecraft.util.ActionResult;
@@ -14,7 +16,6 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.registry.Registry;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
@@ -63,7 +64,7 @@ public class TemplatePotBlock extends Block {
         boolean bl = potIsEmpty = (worldIn.getBlockState(pos).get(FLOWER)).getBlock() == Blocks.AIR;
         if (doesNotHoldFlower != potIsEmpty) {
             if (potIsEmpty) {
-                Identifier rl = Registry.BLOCK.getId(flowerIn);
+                Identifier rl = Registries.BLOCK.getId(flowerIn);
                 worldIn.setBlockState(pos, this.getDefaultState().with(FLOWER, (rl.getNamespace().equals("biomesoplenty") ? Flower.FLOWERS.get("bop_" + rl.getPath()) : Flower.FLOWERS.get(rl.getPath()))), 3);
                 player.incrementStat(Stats.POT_FLOWER);
                 if (!player.getAbilities().creativeMode) {
