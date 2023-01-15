@@ -2,6 +2,7 @@ package com.eternalhelldevs.moreflowerpots.registry;
 
 import com.eternalhelldevs.moreflowerpots.MoreFlowerPots;
 import com.eternalhelldevs.moreflowerpots.blocks.TemplatePotBlock;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -62,7 +63,7 @@ public class RegistryHandler {
                     Identifier identifier = new Identifier(MoreFlowerPots.MOD_ID, field.getName().toLowerCase());
 
                     Registry.register(Registries.BLOCK, identifier, block);
-                    Registry.register(Registries.ITEM, identifier, new BlockItem(block, new Item.Settings()));
+                    Registry.register(Registries.ITEM, identifier, new BlockItem(block, new FabricItemSettings()));
 
                     ItemGroupEvents.modifyEntriesEvent(ITEM_GROUP).register(content -> {
                         content.add(block);
