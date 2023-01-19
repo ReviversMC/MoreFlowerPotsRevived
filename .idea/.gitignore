@@ -1,3 +1,7 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+
+# Run configurations (may contain personal data)
+/runConfigurations/Minecraft_Client.xml
+/runConfigurations/Minecraft_Server.xml
