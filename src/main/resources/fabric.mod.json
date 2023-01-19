@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "moreflowerpots",
   "version": "${version}",
-  "name": "com.eternalhelldevs.moreflowerpots",
-  "description": "MoreFlowerPots for Fabric (ReviversMC flavoured)",
+  "name": "MoreFlowerPotsRevived",
+  "description": "Adds more flower pots. Fun!",
   "authors": [
     "EternalHellDevs",
     "thefirethirteen"
